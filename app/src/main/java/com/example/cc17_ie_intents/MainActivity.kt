@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun goToNextAct() {
-
+        val un = findViewById<TextInputEditText>(R.id.username)
+        val intent = Intent(this, NextActivity::class.java)
+        intent.putExtra("username", un.getText().toString())
+        startActivity(intent)
     }
 }
 
