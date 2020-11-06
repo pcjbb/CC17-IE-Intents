@@ -2,10 +2,11 @@ package com.example.cc17_ie_intents
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class NextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,4 +30,9 @@ class NextActivity : AppCompatActivity() {
         intent.data = Uri.parse("content://media/external/images/media/")
         startActivity(intent)
     }
+    private fun openAlarm() {
+        val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
+        startActivity(intent)
+    }
+
 }
