@@ -30,11 +30,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/openGalleryBtn"
+        android:id="@+id/openMessageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="see photos"
+        android:text="SEND SMS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/openGalleryBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/openMessageBtn" />
 
     <Button
         android:id="@+id/openMapsBtn"
@@ -63,11 +63,11 @@
         app:layout_constraintTop_toBottomOf="@+id/openAlarmBtn" />
 
     <Button
-        android:id="@+id/errorbutton2"
+        android:id="@+id/openCalendarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Button"
+        android:text="set an event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
