@@ -1,0 +1,2 @@
+rootProject.name = "CC17-IE-Intents"
+include ':app'
