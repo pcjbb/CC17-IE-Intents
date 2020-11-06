@@ -18,6 +18,8 @@ class NextActivity : AppCompatActivity() {
             Toast.makeText(this, "Welcome, $username!", Toast.LENGTH_SHORT).show()
         }
         findViewById<Button>(R.id.openBrowserBtn).setOnClickListener { openBrowser() }
+        findViewById<Button>(R.id.openGalleryBtn).setOnClickListener { openGallery() }
+        findViewById<Button>(R.id.openAlarmBtn).setOnClickListener { openAlarm() }
     }
     private fun openBrowser() {
         Toast.makeText(this, "Opening browser", Toast.LENGTH_SHORT).show()
@@ -25,7 +27,8 @@ class NextActivity : AppCompatActivity() {
         intent.setData(Uri.parse("https://www.google.com/"))
         startActivity(intent)
     }
-    private fun openCamera() {
+    private fun openGallery() {
+        Toast.makeText(this, "Opening gallery", Toast.LENGTH_SHORT).show()
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse("content://media/external/images/media/")
         startActivity(intent)
