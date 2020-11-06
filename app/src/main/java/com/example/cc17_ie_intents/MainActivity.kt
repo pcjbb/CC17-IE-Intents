@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             login.setOnClickListener {
                 val username = un.text.toString()
                 val password = pw.text.toString()
-                if (username.equals("princess") && password.equals("123")) {
+                if (username=="princess" && password=="123") {
                     goToNextAct()
                 } else {
                     Toast.makeText(this, "Try again", Toast.LENGTH_SHORT).show()
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun goToNextAct() {
         val un = findViewById<TextInputEditText>(R.id.username)
-        val intent = Intent(this, NextActivity::class.java)
+        val intent = Intent(this, NextActivityFNL::class.java)
         intent.putExtra("username", un.getText().toString())
         startActivity(intent)
     }
