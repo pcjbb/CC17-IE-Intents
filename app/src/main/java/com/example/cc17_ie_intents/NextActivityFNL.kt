@@ -26,7 +26,6 @@ class NextActivityFNL : AppCompatActivity() {
     }
 
     private fun openBrowser() {
-        Toast.makeText(this, "Opening browser", Toast.LENGTH_SHORT).show()
         val intent = Intent(Intent.ACTION_VIEW)
         intent.setData(Uri.parse("https://www.google.com/"))
         startActivity(intent)
@@ -53,13 +52,13 @@ class NextActivityFNL : AppCompatActivity() {
         }
     }
     private fun openCalendar() {
-        //the even will not work because of the lack of data
-        val intent = Intent(CalendarContract.ACTION_HANDLE_CUSTOM_EVENT)
+        //the calendar app won't open because no event has been specified (no data/extra added)
+        val intent = Intent(Intent.ACTION_INSERT)
         intent.addCategory(Intent.CATEGORY_APP_CALENDAR)
             if (intent.resolveActivity(packageManager) != null) {
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "Calendar failed to open because no event was specified.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Calendar failed to open because no event has been specified", Toast.LENGTH_SHORT).show()
             }
         }
     }
