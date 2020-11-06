@@ -20,6 +20,7 @@ class NextActivity : AppCompatActivity() {
         findViewById<Button>(R.id.openBrowserBtn).setOnClickListener { openBrowser() }
         findViewById<Button>(R.id.openGalleryBtn).setOnClickListener { openGallery() }
         findViewById<Button>(R.id.openAlarmBtn).setOnClickListener { openAlarm() }
+        findViewById<Button>(R.id.openMapsBtn).setOnClickListener { openAlarm() }
     }
     private fun openBrowser() {
         Toast.makeText(this, "Opening browser", Toast.LENGTH_SHORT).show()
@@ -36,6 +37,16 @@ class NextActivity : AppCompatActivity() {
     private fun openAlarm() {
         val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
         startActivity(intent)
+    }
+    private fun openMaps(){
+        val loc = "12.9538477,77.3507442"
+        val addressUri = Uri.parse("geo:0,0?q=" + loc)
+        val intent = Intent(Intent.ACTION_VIEW, addressUri)
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        } else {
+            Toast.makeText(applicationContext, "No application found", Toast.LENGTH_SHORT ).show()
+        }
     }
 
 }

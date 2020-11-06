@@ -80,11 +80,11 @@
             app:layout_constraintTop_toBottomOf="@+id/openGalleryBtn" />
 
         <Button
-            android:id="@+id/errorbutton1"
+            android:id="@+id/openMapsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Button"
+            android:text="OPEN MAPS"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +99,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/errorbutton1" />
+            app:layout_constraintTop_toBottomOf="@+id/openMapsBtn" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
