@@ -24,4 +24,9 @@ class NextActivity : AppCompatActivity() {
         intent.setData(Uri.parse("https://www.google.com/"))
         startActivity(intent)
     }
+    private fun openCamera() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("content://media/external/images/media/")
+        startActivity(intent)
+    }
 }
